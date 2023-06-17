@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Set the height of the map container to fill the viewport */
+.map-container {
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style the map container */
+.map-container .leaflet-container {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Define the polygon styles */
+.polygon-style {
+  fill-opacity: 0.7;
+  stroke-width: 2;
+  stroke-dasharray: 3;
+  stroke: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Define the polygon styles for mouseover event */
+.polygon-style:hover {
+  fill-opacity: 0.7;
+  stroke-dasharray: none;
+  fill: #BD0026;
 }
 
-.App-link {
-  color: #61dafb;
+/* Define the polygon styles for selected/clicked event */
+.polygon-style.selected {
+  /* Add custom styles for the selected polygon */
+  fill: #FF0000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
